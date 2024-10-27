@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import authRoutes from './routes/auth';
 import purchaseRoutes from './routes/purchases';
+import itemRoutes from './routes/items';
 
 dotenv.config();
 
@@ -14,5 +15,6 @@ app.use(cors());
 
 app.use('/auth', authRoutes);
 app.use('/purchase', purchaseRoutes);
+app.use('/items', itemRoutes);
 
 app.listen(PORT, () => console.log(`App is running on port: ${PORT}`));
